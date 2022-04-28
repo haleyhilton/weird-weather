@@ -1,0 +1,78 @@
+:root{
+--light-blue: rgb(64, 140, 184);
+--blue: rgb(20, 34, 95);
+--grey: rgb(128, 128, 128);
+
+}
+
+.button-div{
+    width: 100%;
+    padding: 5px;
+    background-color: var(--light-blue);
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+#header {
+    width: 100%;
+    background-image: linear-gradient(to right, rgb(64, 140, 184), rgb(20, 34, 95));    
+    height: 100px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    color: white;
+}
+#header-text {
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+#main-row {
+    background-color: rgba(255, 0, 0, 0);
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 18px;
+    height: 450px;
+}
+
+
+.city-container {
+    border: 1px solid rgba(112, 112, 112, 0.315);
+    margin: 15px;
+    height: 200px;
+    float: left;    
+    width: 90%;
+    border-radius: 10px;
+    padding: 15px 25px;
+}
+
+
+#city-title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.forecast-container {
+    width: 16.65%;
+    height: 40%;
+    background-color: var(--blue);
+    color: white;
+    float: left;
+    margin: 15px 1% 0px 1%;
+    border-radius: 10px;
+    padding: 0 4px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.form-group{
+    font-size: xx-large;
+}
+
+.five-day-forecast{
+    font-size: large;
+}
