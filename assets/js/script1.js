@@ -1,28 +1,11 @@
-//var APIKey = "f0a8b5d1b019233b3dd559fd1eba0c60"
-//var city;
-// let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
-// const iconEl = document.querySelector('#icon')
-// const cityNameEl = document.querySelector('#city-name')
-// const temperatureEl = document.querySelector('#temperature')
-// const windSpeedEl = document.querySelector('#wind-speed')
-// const humidityEl = document.querySelector('#humidity')
-// const UVindexEl = document.querySelector('#UV-index')
-//var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey + "&units=imperial";
 
 var APIKey = "f0a8b5d1b019233b3dd559fd1eba0c60"
 var city;
 var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey + "&units=imperial";
 var outPutEl = document.querySelector('.city-container')
+src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js";
 
-// async function getWeatherData() {
-//     var response = await fetch(queryURL, APIKey)
-//     var data = await response.json();
-//     data.main.forEach(item => {
-//         outPutEl.innerHTML = item.temperature
-//     });
-// }
 
-// getWeatherData();
 
 var APIKey = "f0a8b5d1b019233b3dd559fd1eba0c60"
 var city;
@@ -61,6 +44,44 @@ console.log(data)
 
 
 btnEl.addEventListener('click', getWeatherData);
-btnEl.addEventListener('click', getForecast);
 
 console.log("testing")
+/*
+var fiveDayURL;
+$.ajax({
+    url: fiveDayURL,
+    method: "GET",
+  }).then(function (responseForecast) {
+    console.log(responseForecast);
+    for (i = 0; i < 5; i++) {
+      console.log(i * 8 + 4);
+      var date = responseForecast.list[i * 8 + 4].dt_txt;
+      var dateSplit = date.split(" ", 1)[0];
+      var dateSplit2 = dateSplit.split("-");
+      console.log(dateSplit2);
+
+      var finalDate = dateSplit2[1] + "/" + dateSplit2[2] + "/" + dateSplit2[0];
+      var newCard = $("<div>").attr("class", "card");
+      newCard.append("<div class='card-body'>");
+      newCard.append(
+        "<h5 class='card-title' id = 'cardHead'>" + finalDate + "</h5>"
+      );
+      var imgDiv = $(
+        "<div id = 'icon'><img id='wicon' src='https://openweathermap.org/img/w/" +
+          responseForecast.list[i * 8 + 4].weather[0].icon +
+          ".png' alt = 'weather icon'></div>"
+      );
+      newCard.append(imgDiv);
+      var newCardTemp =
+        (responseForecast.list[i * 8 + 4].main.temp - 273) * (9 / 5) + 32;
+      newCard.append(
+        "<div>Temp: " + newCardTemp.toFixed(1) + " &#176" + "F</div>"
+      );
+      newCard.append(
+        "<div>Humidity: " +
+          responseForecast.list[i * 8 + 4].main.humidity +
+          "%</h5>"
+      );
+      $("#fiveDay").append(newCard);
+    });
+}*/
